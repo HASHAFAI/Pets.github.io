@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+
+html {scroll-behavior: smooth;}
+body{
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+}
+h3{
+    font-size: 18PX;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+h5{
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+}
+a{text-decoration: none;color: #000;
+}
+li{list-style: none;}
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+button,
+.button{
+    background-color: #3040C4;
+    border-radius: 41px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 26px;
+}
+button:hover,
+.button:hover{background-color: #4151df;}
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+header{
+    margin:32px 24px;
+    border-bottom: 1px solid #EEF0FC;
+    padding-bottom: 40px;
+    position: relative;
+}
+header .logo img{float: right;}
+header button.burger{
+ float:left;
+ background-color: #000;
+ border: none;
+ width: 20px;
+ height: 3px;
+ margin-top: 10px;
+ position: relative;
+ cursor: pointer;
+ z-index: 1;
+}
+header.active button.burger{background-color: transparent;}
+header button:before,
+header button:after {
+    content: "";
+    background: #000;
+    height: 100%;
+    width: 20px;
+    right: 0px;
+    position: absolute;
+  }
+header button:before {top: 7px;}
+header button:after {top: -7px;}
+header.active button:before {
+    top: 0px;
+    transform: rotate(-45deg);
+    background-color: #3040C4;
+}
+header.active button:after {
+    top: 0px;
+    transform: rotate(45deg);
+    background-color: #3040C4;
+}
+header .main-nav{display: none;}
+header.active .main-nav{
+    position: relative;
+    top: 20px;
+    left: -70px;
+    display:flex;
+}
+header .main-nav ul{float: left;}
+header .main-nav ul li{padding: 0 10px;line-height: 25px;}
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+.hero .hero__desc{margin: 0 24px;}
+.hero .hero__desc h1{
+  font-size: 36px;
+  line-height: 49px;
+  font-weight: bold;
+  color: #2B292D;
+  text-transform: capitalize;
+}
+.hero .hero__desc p{
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.hero .hero__desc .button{padding: 15px 45px;outline: none;}
+.hero .hero__image img{width: 100%;}
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+.meetYourMatch{
+    text-align: center;
+    position: relative;
+    background-color: rgb(229, 229, 229,.2);
+}
+.meetYourMatch__background{
+    position: absolute;
+    background-color: #EEF0FC;
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    margin-top: -3px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.meetYourMatchــcontent h2{padding-top: 50px;margin-top: 0;}
+.meetYourMatchــcontent .switcher input{display: none;}
+.meetYourMatchــcontent label{cursor: pointer;margin: 0 20px;}
+.meetYourMatchــcontent .switcher{position: relative;}
+.meetYourMatchــcontent .switcher span{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9FA2B8;
+    text-transform:uppercase;
+    width: 50%;
+}
+.meetYourMatchــform .form-group {
+    margin: 35px auto;
+    position: relative;
+    display: inline-block;
+}
+.meetYourMatchــform .form-group input{
+    width: 230px;
+    height: 40px;
+    border-radius: 41px;
+    border: 1px solid #3040C4;
+    outline: none;
+    padding-left: 35px;
+    color: #3040C4;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.meetYourMatchــform .form-group:before{
+    content: url(../images/map-pin.png);
+    position: absolute;
+    top: 25%;
+    left: 2%;
+}
+.meetYourMatchــform .form-group button{
+    width: 100px;
+    position: absolute;
+    height: 44px;
+    border-radius: 41px;
+    border: 1px solid #3040C4;
+    outline: none;
+    right: 0%;
+    cursor: pointer;
+}
+.meetYourMatch .widgets .widget{
+    background-color: #fff;
+    width: 85%;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px -7px #000;
+}
+.meetYourMatch .widgets .widget__image img{width: 100%;height: auto;}
+.meetYourMatch .widgets .widget__desc {padding:10px 20px 15px;}
+.meetYourMatch .widgets .widget__desc h4{
+    text-align: left;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.meetYourMatch .widgets .widget__desc p{
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    margin:0 0 5px 0;
+}
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+.howItWorks{
+    text-align: center;
+    margin: 70px 0 70px;
+    padding: 0 24px 40px;
+}
+.howItWorks h2{margin-bottom: 60px;}
+.howItWorks .widget__desc p{
+    color: #6A6C79;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 40px;
+}
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+.stories{
+    background: #F6F6F9;
+    text-align: center;
+    padding: 10px 24px 30px;
+}
+.stories p{
+    font-size: 14px;
+    color: #5F5F80;
+    margin-bottom: 30px;
+}
+.stories .widget__image img{width: 100%;margin: 10px 0;}
+.stories .widget__desc{text-align: start;padding:0 0 30px ;}
+.stories .widget__desc h3{font-weight:200;margin: 0 0 10px;}
+.stories .widget__desc a{
+    color: #2329DB;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+.actions{
+    text-align: center;
+    background-color: #3040C4;
+    width: 100%;
+    height: 240px;
+}
+.actions h2{
+    color: #fff;
+    margin:0 0 60px;
+    padding: 50px 0 0;
+}
+.actions a{
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 41px;
+    padding: 8px 29px;
+    margin: 0px 5px;
+}
+.actions a:hover{color: #3040C4;background-color: #fff;}
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+footer{margin: 40px 24px 10px;}
+.copyrights p,
+.copyrights p a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    line-height: 23px;
+}
+footer{position: relative;}
+footer .footer-nav .item{
+ display: inline-table;
+ width: 49%;
+ margin: 5px auto;
+ padding-bottom: 40px;
+}
+footer .footer-nav .item ul{padding: 0;}
+footer .footer-nav .item li{list-style: none;padding: 5px 0;}
+footer .footer-nav .item li a{
+    text-decoration: none;
+    font-weight: 100;
+    color: #000;
+}
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*         قياسات التابلت  و الحواسيب        */
+/* HEADER */
+@media(min-width:768px){
+    header{border-bottom:none;}
+    header .logo img{float: left;}
+    header button.burger{float:right;}
+    header button{display: none;}
+    header .main-nav{    
+        position: absolute;
+        top: -20%;
+        right: 5px;
+        display: block;}
+        header .main-nav ul{float: right;display: flex;}
+        header .main-nav ul li{font-size: 18px;}
+}
+@media(min-width:1024px){
+    header{
+        margin:20px 50px 40px;
+        border-bottom: 1px solid #EEF0FC;
+        z-index: 1;
+        padding-bottom: 40px;
+    }
+}
+/* HERO */
+@media(min-width:768px){
+    .hero .container{
+        display: flex;
+        position: relative;
+    }
+    .hero .hero__desc{width: 40%;}
+    .hero .hero__image{
+        position: absolute;
+        right: 5px;
+        top: 30px;
+        width: 55%;
+      }
+}
+@media(min-width:1024px){
+    .hero .container{margin: 50px 50px 100px;}
+    .hero .hero__image{
+        top: -50px;
+        width: 60%;
+      }
+      .hero .hero__desc{width:30%;}
+}
+/*  MEET YOUR MATCH   */
+@media(min-width:768px){
+    .meetYourMatch .container{margin:70px 5%;}
+    .meetYourMatch__background{
+        width: 90%;
+        border-radius: 40px;
+    }
+    .meetYourMatchــform .form-group input{
+        width: 450px;
+        padding-left: 50px;
+    }
+    .meetYourMatch .widgets{
+        width: 90%;
+        margin:0 auto ;
+    }
+    .meetYourMatch .widgets .widget{
+        width: 45%;
+        margin: 20px 2%;
+        display: inline-block;
+    }
+    .meetYourMatchــcontent .switcher img{
+        width: 80px;
+        margin: 0 10px;
+    }
+    .meetYourMatchــcontent .switcher span{font-size: 20px;z-index: -1;}
+}
+@media(min-width:1024px){
+    .meetYourMatch .widgets .widget{
+        width: 22%;
+        margin: 20px 1%;
+    }
+}
+/* HOW IT WORKS */
+@media(min-width:768px){
+    .howItWorks .container{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .howItWorks .container .widget{margin: 40px 0;}
+    .meetYourMatch .widgets .widget__image img{height: 200px;}
+}
+@media(min-width:1024px){
+    .howItWorks .container{width: 100%;}
+    .howItWorks .widgets{display: inline-block;}
+    .howItWorks .widgets .widget{
+     display: inline-block;
+     width: 22%;
+     margin: 0 1%;
+    }
+}
+/* STORIES */
+@media(min-width:768px){
+    .stories p{
+        width: 70%;
+        margin: 30px auto 30px;
+    }
+    .stories .widgets{
+        width: 90%;
+        margin: 0 auto;
+        text-align: start;
+    }
+    .stories .widget{
+        display: inline-block;
+        width: 45%;
+        margin: 0 2%;
+    }
+}
+@media(min-width:1024px){
+    .stories p{width: 40%;}
+    .stories .widgets{
+        width: 100%;
+        text-align: center;
+    }
+    .stories .widget{
+        width: 22%;
+        margin: 0 2%;
+    }
+}
+/*  Actions: Change A Life, Adopt A Pet */
+@media(min-width:768px){
+    .actions a{padding: 20px 30px;}
+}
+/* FOOTER */
+@media(min-width:768px){
+    footer .container{display: table-row;}
+    .copyrights{
+        position: absolute;
+        display: table-cell;
+        padding-right: 30px;
+        top: 20px;
+    }
+    footer .footer-nav{
+        position: absolute;
+        right:0;
+       }
+    footer .footer-nav .item{
+        width: auto;
+        margin:0 16px;
+       }
+    footer .footer-nav .item ul{padding: 5px;}
+}
+@media(min-width:1024px){
+    footer .footer-nav{right:50px;}
+    .copyrights{left: 30px;}
+    footer .footer-nav .item ul{padding: 5px 15px;}
+}
+/*----------------------------------------------*/

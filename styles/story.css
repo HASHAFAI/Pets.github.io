@@ -1,0 +1,15 @@
+section.stories2{
+    margin:32px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .img-story{width: 35%;margin-right: 10px;}
+section .img-story img{width: 100%;}
+section .text-story{width: 50%;}
+h2{text-align: center;}
+@media(max-width:768px){
+    section.stories2{display: block;}
+    section .img-story{width: 100%;}
+    section .text-story{width: 100%;}
+}
