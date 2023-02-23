@@ -1,34 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-/*----------------------٢-----------------------*/
-/*                  DEFAULTS                    */
-
-html {scroll-behavior: smooth;}
-body{
-    font-family: 'Lato', sans-serif;
-    color: #000;
-    /* box-sizing: border-box; */
-    margin: 0;
-    padding: 0;
-}
-h2{
-    font-size: 24px;
-    line-height: 32px;
-    text-transform: capitalize;
-}
-h3{
-    font-size: 18PX;
-    line-height: 25px;
-    text-transform: capitalize;
-}
-h5{
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: capitalize;
-}
-a{text-decoration: none;color: #000;
-}
-li{list-style: none;}
-/*----------------------٣-----------------------*/
+/*----------------------1-----------------------*/
 /*               HELPER CLASSES                 */
 button,
 .button{
@@ -42,7 +12,7 @@ button,
 }
 button:hover,
 .button:hover{background-color: #4151df;}
-/*----------------------٥-----------------------*/
+/*----------------------2-----------------------*/
 /*                    HEADER                    */
 header{
     margin:32px 24px;
@@ -84,16 +54,22 @@ header.active button:after {
     transform: rotate(45deg);
     background-color: #3040C4;
 }
-header .main-nav{display: none;}
+header .main-nav{
+    height:50px;
+    top: -200px;
+    position: absolute;
+}
 header.active .main-nav{
     position: relative;
     top: 20px;
     left: -70px;
-    display:flex;
+    height: 110px;
+    transition: .9s;
+    overflow: hidden;
 }
-header .main-nav ul{float: left;}
+header .main-nav ul{float: left}
 header .main-nav ul li{padding: 0 10px;line-height: 25px;}
-/*----------------------٦-----------------------*/
+/*----------------------3-----------------------*/
 /*                     HERO                     */
 .hero .hero__desc{margin: 0 24px;}
 .hero .hero__desc h1{
@@ -111,7 +87,7 @@ header .main-nav ul li{padding: 0 10px;line-height: 25px;}
 }
 .hero .hero__desc .button{padding: 15px 45px;outline: none;}
 .hero .hero__image img{width: 100%;}
-/*----------------------٧-----------------------*/
+/*----------------------4-----------------------*/
 /*              MEET YOUR MATCH                 */
 .meetYourMatch{
     text-align: center;
@@ -197,7 +173,7 @@ header .main-nav ul li{padding: 0 10px;line-height: 25px;}
     text-transform: capitalize;
     margin:0 0 5px 0;
 }
-/*----------------------٨-----------------------*/
+/*----------------------5-----------------------*/
 /*               HOW IT WORKS                   */
 .howItWorks{
     text-align: center;
@@ -211,7 +187,7 @@ header .main-nav ul li{padding: 0 10px;line-height: 25px;}
     line-height: 19px;
     margin-bottom: 40px;
 }
-/*----------------------٩-----------------------*/
+/*----------------------6-----------------------*/
 /*                 STORIES                      */
 .stories{
     background: #F6F6F9;
@@ -233,7 +209,7 @@ header .main-nav ul li{padding: 0 10px;line-height: 25px;}
     text-decoration: none;
     font-weight: bold;
 }
-/*----------------------١٠----------------------*/
+/*----------------------7----------------------*/
 /*       Actions: Change A Life, Adopt A Pet    */
 .actions{
     text-align: center;
@@ -254,7 +230,7 @@ header .main-nav ul li{padding: 0 10px;line-height: 25px;}
     margin: 0px 5px;
 }
 .actions a:hover{color: #3040C4;background-color: #fff;}
-/*---------------------١١-----------------------*/
+/*---------------------8-----------------------*/
 /*                    FOOTER                    */
 footer{margin: 40px 24px 10px;}
 .copyrights p,
@@ -278,10 +254,9 @@ footer .footer-nav .item li a{
     font-weight: 100;
     color: #000;
 }
-/*----------------------١٢----------------------*/
+/*----------------------9----------------------*/
 /*                    Responsive                */
-/*         قياسات التابلت  و الحواسيب        */
-/* HEADER */
+                    /* HEADER */
 @media(min-width:768px){
     header{border-bottom:none;}
     header .logo img{float: left;}
@@ -303,7 +278,7 @@ footer .footer-nav .item li a{
         padding-bottom: 40px;
     }
 }
-/* HERO */
+                    /* HERO */
 @media(min-width:768px){
     .hero .container{
         display: flex;
@@ -325,7 +300,7 @@ footer .footer-nav .item li a{
       }
       .hero .hero__desc{width:30%;}
 }
-/*  MEET YOUR MATCH   */
+            /*  MEET YOUR MATCH   */
 @media(min-width:768px){
     .meetYourMatch .container{margin:70px 5%;}
     .meetYourMatch__background{
@@ -357,7 +332,7 @@ footer .footer-nav .item li a{
         margin: 20px 1%;
     }
 }
-/* HOW IT WORKS */
+            /* HOW IT WORKS */
 @media(min-width:768px){
     .howItWorks .container{
         width: 50%;
@@ -375,7 +350,7 @@ footer .footer-nav .item li a{
      margin: 0 1%;
     }
 }
-/* STORIES */
+                /* STORIES */
 @media(min-width:768px){
     .stories p{
         width: 70%;
@@ -407,7 +382,7 @@ footer .footer-nav .item li a{
 @media(min-width:768px){
     .actions a{padding: 20px 30px;}
 }
-/* FOOTER */
+                /* FOOTER */
 @media(min-width:768px){
     footer .container{display: table-row;}
     .copyrights{

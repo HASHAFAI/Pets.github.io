@@ -1,10 +1,26 @@
-/*----------------------١-----------------------*/
-/*                 CSS Reset                    */
-/*
-يجب عليك وضع محتويات الـ 
-CSS Reset
- هنا وليس أي نمط متعلق بالموقع، بل الأنماط التي تريد بها إعادة ضبط أنماط المتصفح
- إفتح هذه المقالة
- https://meyerweb.com/eric/tools/css/reset/
-*/
-/**/
+/*----------------------1-----------------------*/
+/*                  DEFAULTS                    */
+html {scroll-behavior: smooth;}
+body{
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+}
+h3{
+    font-size: 18PX;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+h5{
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+}
+a{text-decoration: none;color: #000;}
+li{list-style: none;}
